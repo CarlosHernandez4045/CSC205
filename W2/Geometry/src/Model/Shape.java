@@ -1,8 +1,13 @@
 package W2.Geometry.src.Model;
 
-public interface Shape {
+public abstract class Shape {
+
+    //makes the shapes iterable if need be later on, and also makes every child class inherit it's own getExplanation() method, even without implementing it
+    protected String explanation;
     
-    public double area();
-    public double shade(int color);
-    public String opacity(int opacity);
+    public abstract double getArea();
+
+    public String getExplanation(){
+        return explanation;
+    };
 }

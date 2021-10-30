@@ -1,27 +1,18 @@
 package W2.Geometry.src.Model;
 
-public class Triangle extends Dazzle implements Shape {
+public class Triangle extends Shape {
     
-    private double length;
-    private double width;
+    private double base;
+    private double height;
 
-    public Triangle(double length, double width) {
-        super();
-        this.length = length;
-        this.width = width;
+    //we redefine the protected variable explanation in the constructor 
+    //This is so when we call getExplanation(), we get the explanation we want instead of the superclass' explanation variable.
+    public Triangle(double base, double height) {
+        this.base = base;
+        this.height = height;
+        explanation = "We multiply base by height, then divide by 2 in order to get area for a rectangle. \n" +
+        "In this case multiplying the base " + this.base + " and height " + this.height + " then dividing by 2 got us " + getArea() + ".";
     }
 
-    @Override
-    public double area(){ return this.width * this.length; }
-
-    @Override
-    public double shade(int color) {
-        return 0;
-    }
-
-    @Override
-    public String opacity(int opacity) {
-        // TODO Auto-generated method stub
-        return null;
-    }
+    public double getArea(){ return (this.height * this.base) / 2; }
 }

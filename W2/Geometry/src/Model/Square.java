@@ -1,26 +1,23 @@
 package W2.Geometry.src.Model;
 
-public class Square extends Dazzle implements Shape {
+public class Square extends Shape {
+
     private double length;
 
-    public Square(double length) {
-        super();
-        this.length = length;
-    }
 
-    @Override
-    public double area() { 
+    //we redefine the protected variable explanation in the constructor 
+    //This is so when we call getExplanation(), we get the explanation we want instead of the superclass' explanation variable.
+    public Square(double length) {
+
+        this.length = length;
+        explanation = "The length of a side squared gets us the area of a square. \n" +
+        "In this case multiplying " + this.length + " by itself got us " + getArea() + ".";
+    }
+    
+    public double getArea() { 
         return this.length * this.length; 
     }
 
-    @Override
-    public double shade(int color) {
-        return 0;
-    }
 
-    @Override
-    public String opacity(int opacity) {
-        // TODO Auto-generated method stub
-        return null;
-    }
+    
 }

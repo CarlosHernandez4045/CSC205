@@ -2,7 +2,6 @@ package W2.UMLGuessingGame.src;
 
 import java.util.Random;
 import java.util.Scanner;
-import java.util.regex.Pattern;
 
 public class Game {
 
@@ -21,12 +20,6 @@ public class Game {
     private int validateAttempts(int maxAttempts) { 
         //defaults to 3 if the maxAttempts are unreasonable.
         return maxAttempts > 0 ? maxAttempts : 3; 
-    }
-
-    private Boolean phoneNoIsValid(String phoneNo){
-        String phoneNoPattern = "\\d{10}|(?:\\d{3}-){2}\\d{4}|\\(\\d{3}\\)\\d{3}-?\\d{4}";
-
-        return Pattern.matches(phoneNoPattern, phoneNo) ? true : false;
     }
 
     //Displays the latest results from all games played
@@ -62,13 +55,22 @@ public class Game {
 
     }
 
+    //method that proccesses user guesses
     private void userGuessSequence(Scanner scan, Player p){
-        this.currentUserTries += 1;
 
         System.out.println("Input a number: ");
         var userNum = scan.nextLine();
         
+        //checks if input is parseable AND if it's valid for our game, which means it isnt below 0 or above 10
+        if(Function.evalAndParseInt(userNum) == null){
+            System.out.println("Invalid input! Inputs should be a whole number that is between 1 and 10.");
+            System.out.println("Please try again.");
+            userGuessSequence(scan, p);
+            return;
+        }
         
+        this.currentUserTries += 1;
+
         if(Integer.valueOf(userNum) == this.guessNo){
             Result(true, p);
         } else {
@@ -80,20 +82,29 @@ public class Game {
         }
     }
 
+    //gets the necessary details from the player in order to instantiate a player object
     public Player getPlayerDetails(Scanner scan){
 
         System.out.println("What's your first name?");
         var firstName = scan.nextLine();
+
         System.out.println("What's your last name?");
         var lastName = scan.nextLine();
+
+        if(firstName.matches(".*\\d.*") | lastName.matches(".*\\d.*")){
+            System.out.println("\nNo numbers in names!\n");
+            System.out.println("Please try again.");
+            return getPlayerDetails(scan);
+        }
+
         System.out.println("What's your phone number?");
 
-        var phoneNo =  scan.nextLine();
+        var phoneNo = scan.nextLine();
 
-        if(!phoneNoIsValid(phoneNo)){
-            System.out.println("\nInvalid Phone Number Format!");
+        if(!Function.phoneNoIsValid(phoneNo)){
+            System.out.println("\nInvalid Phone Number Format!\n");
             System.out.println("Please try again.");
-            getPlayerDetails(scan);
+            return getPlayerDetails(scan);
         }
 
         return new Player(firstName, lastName, phoneNo);
