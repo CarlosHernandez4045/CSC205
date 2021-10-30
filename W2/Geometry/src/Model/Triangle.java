@@ -14,5 +14,15 @@ public class Triangle extends Shape {
         "In this case multiplying the base " + this.base + " and height " + this.height + " then dividing by 2 got us " + getArea() + ".";
     }
 
-    public double getArea(){ return (this.height * this.base) / 2; }
+    public double getArea(){ 
+        return (this.height * this.base) / 2; 
+    }
+
+    public double getBase(){
+        return this.base;
+    }
+
+    public double getHeight(){
+        return this.height;
+    }
 }

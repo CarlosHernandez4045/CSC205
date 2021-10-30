@@ -14,6 +14,16 @@ public class Rectangle extends Shape {
      "In this case multiplying length " + this.length + " by width " + this.width + " got us " + getArea() + ".";
     }
 
-    public double getArea(){ return this.width * this.length; }
+    public double getArea(){ 
+        return this.width * this.length; 
+    }
+
+    public double getLength(){
+        return this.length;
+    }
+
+    public double getWidth(){
+        return this.width;
+    }
 
 }

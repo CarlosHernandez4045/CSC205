@@ -13,16 +13,13 @@ public class Game {
 
     //constructor
     public Game(int maxAttempts){
-        this.maxAttempts = validateAttempts(maxAttempts);
+        //defaults to 3 if the maxAttempts are unreasonable.
+        this.maxAttempts = maxAttempts > 0 ? maxAttempts : 3;
     }
 
     //methods
-    private int validateAttempts(int maxAttempts) { 
-        //defaults to 3 if the maxAttempts are unreasonable.
-        return maxAttempts > 0 ? maxAttempts : 3; 
-    }
 
-    //Displays the latest results from all games played
+    //Displays the results based on if the user won or not
     private void Result(Boolean wonGame, Player p){
         System.out.println("Game has ended.");
         if(wonGame){
@@ -34,6 +31,7 @@ public class Game {
         System.out.println("------------------------------------------");
     }
 
+    //Main play sequence
     public void Play(){
         Random rand = new Random();
         this.guessNo = rand.nextInt(10) + 1;
@@ -55,7 +53,7 @@ public class Game {
 
     }
 
-    //method that proccesses user guesses
+    //method that proccesses user guesses. Uses recursion to keep calling itself until user wins or loses.
     private void userGuessSequence(Scanner scan, Player p){
 
         System.out.println("Input a number: ");
@@ -83,7 +81,7 @@ public class Game {
     }
 
     //gets the necessary details from the player in order to instantiate a player object
-    public Player getPlayerDetails(Scanner scan){
+    private Player getPlayerDetails(Scanner scan){
 
         System.out.println("What's your first name?");
         var firstName = scan.nextLine();
@@ -108,18 +106,5 @@ public class Game {
         }
 
         return new Player(firstName, lastName, phoneNo);
-    }
-
-    //getters
-    public String getName(){
-        return this.name;
-    }
-
-    public int getGuessNo(){
-        return this.guessNo;
-    }
-
-    public int getMaxAttempts(){
-        return this.maxAttempts;
     }
 }

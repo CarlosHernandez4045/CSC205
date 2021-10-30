@@ -14,10 +14,12 @@ public class Square extends Shape {
         "In this case multiplying " + this.length + " by itself got us " + getArea() + ".";
     }
     
-    public double getArea() { 
+    public double getArea(){ 
         return this.length * this.length; 
     }
 
-
+    public double getLength(){
+        return this.length;
+    }
     
 }

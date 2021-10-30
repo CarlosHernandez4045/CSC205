@@ -6,7 +6,6 @@ public class Player {
     private String lastName;
     private String phoneNo;
     
-    private static Player latestPlayer;
 
     //constructor
     public Player(String firstName, String lastName, String phoneNo){
@@ -14,14 +13,9 @@ public class Player {
         this.firstName = firstName;
         this.lastName = lastName;
         this.phoneNo = phoneNo;
-
-        latestPlayer = this;
     }
 
     //getters
-    public static Player getLatestPlayer(){
-        return latestPlayer;
-    }
     public String getFirstName(){
         return this.firstName;
     }

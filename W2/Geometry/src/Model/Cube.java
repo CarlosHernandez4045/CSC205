@@ -13,9 +13,12 @@ public class Cube extends Shape{
         "In this case multiplying 6 by " + this.edge*this.edge + " got us " + getArea() + ".";
     }
 
-    @Override
     public double getArea() { 
         return 6 * (edge*edge); 
+    }
+
+    public double getEdge(){
+        return this.edge;
     }
 
 
