@@ -1,3 +1,4 @@
+package DEMO;
 public class InstallJavaProject {
     
     public static void main(String[] args) {
