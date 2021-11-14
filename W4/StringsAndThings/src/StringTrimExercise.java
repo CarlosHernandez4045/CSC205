@@ -17,5 +17,5 @@ public class StringTrimExercise {
 //returns the string trimmed, removing the trailing whitespace
 public static String trimString(String s){
     return s.trim();
-}
+    }
 }
