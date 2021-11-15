@@ -5,7 +5,6 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.PrintWriter;
-import W4.ParsingMovieRentals.src.Model.ColorConsole;
 import W4.ParsingMovieRentals.src.Model.Customer;
 import W4.ParsingMovieRentals.src.Model.Movie;
 import W4.ParsingMovieRentals.src.Model.Rental;
