@@ -17,4 +17,15 @@ public class ScannerParsing {
             System.out.println(scanner.nextLine());
         }
     }
+
+    private static void printCharContentsOfFile(String filePath) throws Exception { 
+        File file = new File(filePath);
+        Scanner scanner = new Scanner(file);
+
+        while (scanner.hasNextLine()) {
+            for(var character : scanner.nextLine().toCharArray()) {
+                System.out.println(character);
+            }
+        }
+    }
 }

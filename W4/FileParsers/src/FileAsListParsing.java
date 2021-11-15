@@ -40,6 +40,7 @@ public class FileAsListParsing {
         } catch (Exception e) {
             System.out.println("An error has occured. Below is the error.");
             System.out.println(e.getMessage());
+            System.out.println(e.getStackTrace());
         }
      }
     

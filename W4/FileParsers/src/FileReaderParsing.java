@@ -26,4 +26,17 @@ public class FileReaderParsing {
 
         fr.close();
     }
+
+    private static void printCharContentsOfFile(String file) throws Exception {
+        FileReader fr = new FileReader(file);
+
+        int i;
+
+        //add each character to the StringBuilder
+        while((i = fr.read()) != -1) {
+            System.out.println((char)i);
+        }
+
+        fr.close();
+    }
 }
