@@ -1,0 +1,7 @@
+Full Name, Movie Title, Movie Price Code, Days Rented
+David Smith, No time to Die, N, 3
+Jack Moore, Anna, C, 3
+Marry Ann, Frozen, C, 2
+Jack Moore, No Time to Die, N, 3
+David Smith, Anna, C, 3
+Marry Ann, Frozen, C, 2
