@@ -1,0 +1,11 @@
+***************************************************************************
+                                 MOVIE REPORT
+                          (sorted by name of movie)
+***************************************************************************
+Movie Title, Price Code
+Anna, C
+Anna, C
+Frozen, C
+Frozen, C
+No Time to Die, N
+No time to Die, N

@@ -1,0 +1,11 @@
+***************************************************************************
+                                 MOVIE REPORT
+                          (sorted by name of movie)
+***************************************************************************
+Days Rented, Movie Title, Movie Price Code
+2, Frozen, C
+2, Frozen, C
+3, No time to Die, N
+3, Anna, C
+3, No Time to Die, N
+3, Anna, C
