@@ -1,0 +1,21 @@
+***************************************************************************
+                            MOVIE RENTAL REPORT
+***************************************************************************
+Rental Records for David Smith
+	No time to Die	9.0
+	Anna	1.5
+	Amount owed is : 10.5
+ 	David Smith earned : 3 frequent renter points  
+-------------------------------------------------------------
+Rental Records for Jack Moore
+	Anna	1.5
+	No Time to Die	9.0
+	Amount owed is : 10.5
+ 	Jack Moore earned : 3 frequent renter points  
+-------------------------------------------------------------
+Rental Records for Marry Ann
+	Frozen	1.5
+	Frozen	1.5
+	Amount owed is : 3.0
+ 	Marry Ann earned : 2 frequent renter points  
+-------------------------------------------------------------

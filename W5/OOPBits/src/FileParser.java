@@ -1,13 +1,14 @@
-package W5.CustomComparableInterface.src;
+package W5.OOPBits.src;
 
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.PrintWriter;
-import W5.CustomComparableInterface.src.Model.Customer;
-import W5.CustomComparableInterface.src.Model.Movie;
-import W5.CustomComparableInterface.src.Model.Rental;
+
+import W5.OOPBits.src.Model.Customer;
+import W5.OOPBits.src.Model.Movie;
+import W5.OOPBits.src.Model.Rental;
 
 public class FileParser {
       //this function sorts the input CSV, creates a stringBuilder we learned about around it, and then sorts it, returning the stringbuilder
