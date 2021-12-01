@@ -20,7 +20,7 @@ public class App {
         var car3 = new Car("Toyota", 112345.00D);
         var car4 = new Car("AlphaRomeo", 334323.00D); 
 
-        var carList = Car.getCarList();
+        ArrayList<Car> carList = Car.getCarList();
 
 
         System.out.println("Unsorted List of Cars:");
