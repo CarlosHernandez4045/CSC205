@@ -1,6 +1,6 @@
 ## What is this repo?
 
-This repo deals with Dinesh Staphit's CSC205 class at Gateway. It will serve to turn in assignments, while having version control.
+This repo deals with Dinesh Staphit's CSC205 class at Gateway. It will serve to have version control for my assignments in his class. It is the root folder for all assignments, so all assignments will be backed in this repo.
 
 ### Repo Structure
 
