@@ -20,7 +20,7 @@ public class App {
 
 
         //optimized code - runs on multiple processors
-        personsDB.forEach(p -> p.getFn().toUpperCase()); 
+        personsDB.forEach(p -> p.setFn(p.getFn()));
 
         personsDB.sort(new Comparator<Person>() {
             @Override
@@ -29,8 +29,14 @@ public class App {
             }
         });
 
+        //lambda
         personsDB.sort((p1, p2) -> {
             return p1.getPersonID().compareTo(p2.getPersonID());
         });
+
+        personsDB.forEach(p -> System.out.println(p)); 
+        personsDB.forEach(p -> p.setLn(p.getLn().toUpperCase())); 
+        personsDB.forEach(p -> System.out.println(p)); 
+
     }
 }
