@@ -50,4 +50,9 @@ class Gad2Chair {
     private App getOuterType() {
         return new App();
     }
+    
+    @Override 
+    public String toString() { 
+        return listChairRiders();
+    }
 }

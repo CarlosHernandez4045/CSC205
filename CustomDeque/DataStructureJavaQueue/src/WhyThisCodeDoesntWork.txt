@@ -1,0 +1,7 @@
+This code does not run because a Deque requires the shifting of elements after removing one. 
+Because of its function, it requires a dynamic set of elements that move on every removal. 
+This is very hard to implement correctly, so we rely on pre-written algorithms to do it for us. 
+After removing the 2 elements from the head and tail, they become null, with the final in the middle.
+Deque doesn't realize this, and continues to add onto front using "front++" resulting in an outOfBounds 
+exception. I also wrote a stream implementation of my toString override for the custom Deque. 
+This uses lambda and stream to run multithreaded.

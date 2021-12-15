@@ -74,9 +74,9 @@ public class App {
 		chair = gad2Lift.deQueue();
 
 		//should be Sarah and Bill
+
 		if(chair==null){
 			return;
 		}
-		System.out.println(chair.listChairRiders());
 	}
 }

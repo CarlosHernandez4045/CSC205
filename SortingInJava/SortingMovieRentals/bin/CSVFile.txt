@@ -1,0 +1,11 @@
+Price Code, Movie, Days Rented
+3, The Day Before Christmas, C  
+ R , Die Hard, 5
+Spider-Man: No Way Home, 2, N 
+Avengers: Endgame, R , 1
+ C , Home Alone, 14
+2, N , Fast and the Furious
+ C , 9, Frozen
+7, R , No Time To Die
+5, C , Rapunzel
+Antman, C , 6
