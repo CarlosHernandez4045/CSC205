@@ -23,5 +23,8 @@ public class LambdaMovie01 {
         movies.sort((Movie m1, Movie m2) -> { 
             return m1.getPrice().compareTo(m2.getPrice());
         });
+
+        //Finally print the results (redone in lambda form)
+        movies.forEach(m -> System.out.println(m));
     }
 }
