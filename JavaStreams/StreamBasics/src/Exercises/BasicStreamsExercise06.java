@@ -1,5 +1,6 @@
 package Exercises;
 import java.util.List;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 import Data.ExampleData;
@@ -15,7 +16,7 @@ public class BasicStreamsExercise06 {
      * @return A string containing the products as strings, separated by newlines ('\n').
      */
 
-    public String formatProductList(List<Product> products) {
+    public static String formatProductList(List<Product> products) {
         // TODO: Convert each of the products to a string (using Product.toString()) and collect the results in a string.
         // Separate the products strings by a newline character '\n'.
         //
@@ -23,6 +24,6 @@ public class BasicStreamsExercise06 {
 
         //return products.stream()...;
 
-        throw new UnsupportedOperationException("Not yet implemented"); // Remove this line
+        return products.stream().map(p -> p.toString()).collect(Collectors.joining("\n"));
     }
 }

@@ -30,7 +30,7 @@ public class BasicStreamsExercise01 {
 
         
         return products.stream()
-            .filter(p -> p.getCategory().equals(Category.UTENSILS))
-            .collect(Collectors.toList());
+                        .filter(p -> p.getCategory().equals(Category.UTENSILS))
+                        .collect(Collectors.toList());
     }
 }

@@ -3,6 +3,7 @@ import java.util.List;
 import java.util.stream.Stream;
 
 import Data.ExampleData;
+import Model.Category;
 import Model.Product;
 import java.math.BigDecimal;
 import java.util.List;
@@ -17,14 +18,15 @@ public class BasicStreamsExercise05 {
      * @return {@code true} if all products in the category OFFICE in the list cost less than the price limit,
      * {@code false} otherwise.
      */
-    public boolean areAllOfficeProductsCheap(List<Product> products, BigDecimal priceLimit) {
+    public static boolean areAllOfficeProductsCheap(List<Product> products, BigDecimal priceLimit) {
         // TODO: Look for products in the category OFFICE. Check if all of them cost less than the price limit.
         //
         // Hint: Use two stream operations; one the find the appropriate products,
         // and another one to check if they all cost less than the price limit.
 
 //        return products.stream()...;
-
-        throw new UnsupportedOperationException("Not yet implemented"); // Remove this line
+        return products.stream()
+                        .filter(p -> p.getCategory().equals(Category.OFFICE))
+                        .allMatch(p -> p.getPrice().compareTo(priceLimit) < 0);
     }
 }

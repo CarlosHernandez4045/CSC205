@@ -43,11 +43,11 @@ public class BasicStreamsExercise02 {
      * Exercise 2b: Given a map that contains products grouped by category and a stream of categories, get the names of the products
      * for each category in that stream and return all the products in a list.
      *
-     * @param productsByCategory A map containing products grouped by category.
-     * @param categories         A stream of product categories.
+     * @param productCategoryHashmap A map containing products grouped by category.
+     * @param categoryStream         A stream of product categories.
      * @return A list containing the names of products in each of the categories in the given stream.
      */
-    public List<String> categoriesToProductNames(Map<Category, List<Product>> productsByCategory, Stream<Category> categories) {
+    public static List<String> categoriesToProductNames(Map<Model.Category, List<Product>> productCategoryHashmap, Stream<Model.Category> categoryStream) {
         // TODO: Start with the stream of categories.
         // For each category in that stream, get the products.
         // Then transform them to product names.
@@ -56,6 +56,8 @@ public class BasicStreamsExercise02 {
         // Hint: You'll need to use different mapping methods.
 
 //        return categories...;
-        return categories.map(category -> "Category: " + category + "Product: " + productsByCategory.get(category)).collect(Collectors.toList());
+        return categoryStream
+                        .map(category -> "Category: " + category + "\nProducts: " + productCategoryHashmap.get(category).stream().map(p -> p.getName()).collect(Collectors.joining(", ")) + "\n")
+                        .collect(Collectors.toList());
     }
 }
